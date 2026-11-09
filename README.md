@@ -163,6 +163,8 @@ A "deployed build is main" check that still fails after its grace is the merged-
 
 Checks are for reading. Use `GET`, or `POST` only to endpoints that change nothing (search, read-only MCP tools). Keep `burst` small, and remember that a nightly job and a few people running it by hand all come from the same addresses.
 
+`livecheck all` runs whatever each repository has committed, and `{{env.NAME}}` sends that variable to the URL the file names. Run it only over repositories whose committers you trust, with no more in its environment than the checks need.
+
 ## Tests
 
 ```sh
